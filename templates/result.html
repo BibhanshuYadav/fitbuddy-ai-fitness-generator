@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Hello {{name}}</h2>
+<div class="plan-box">
+<h3>Workout Plan</h3>
+<pre>{{workout_plan}}</pre>
+</div>
+<div class="tip-box">
+<h3>Nutrition Tip</h3>
+<p>{{nutrition_tip}}</p>
+</div>
+<form action="/feedback/{{user_id}}" method="post">
+<input name="feedback" placeholder="Enter feedback">
+<button class="btn">Update Plan</button>
+</form>
+{% endblock %}

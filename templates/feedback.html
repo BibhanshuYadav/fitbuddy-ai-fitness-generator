@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Updated Plan</h2>
+<p>Feedback: {{feedback}}</p>
+<div class="plan-box">
+<pre>{{updated_plan}}</pre>
+</div>
+<form action="/feedback/{{user_id}}" method="post">
+<input name="feedback" placeholder="More feedback">
+<button class="btn">Update Again</button>
+</form>
+{% endblock %}
